@@ -1,0 +1,17 @@
+service: poc-etl
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  iam:
+    role:
+      name: "lambda-extract-to-s3"
+      statements:
+        - Effect: "Allow"
+          Action: "s3:PutObject"
+          Resource: ${file(./config.json):PUT_PERMISSION_RESOURCE_ARN}
+
+functions:
+  function1:
+    handler: index.handler

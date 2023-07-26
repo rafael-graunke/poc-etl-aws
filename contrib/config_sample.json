@@ -1,0 +1,5 @@
+{
+    "S3_BUCKET_NAME": "xxx",
+    "API_ENDPOINT": "https://xxx",
+    "PUT_PERMISSION_RESOURCE_ARN": "arn:aws:s3:::xxx/*"
+}
